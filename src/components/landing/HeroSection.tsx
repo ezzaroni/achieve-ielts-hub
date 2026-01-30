@@ -56,13 +56,16 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Curved bottom section */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[150%] md:w-[120%] h-[55vh] md:h-[65vh] bg-secondary-foreground/10 backdrop-blur-[2px] rounded-t-[100%] border-t border-secondary-foreground/20">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] h-[90%] bg-gradient-to-b from-secondary-foreground/20 to-secondary-foreground/5 rounded-t-[100%]" />
-      </div>
-
       {/* Hero image and floating elements */}
-      <div className="relative w-full max-w-6xl mx-auto h-[600px] mt-[-100px] md:mt-[-150px]">
+      <div className="relative w-full max-w-6xl mx-auto h-[650px] mt-[-50px] md:mt-[-80px]">
+        {/* Large curved ellipse background behind student */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] md:w-[900px] h-[500px] md:h-[700px]">
+          {/* Outer ellipse - lighter teal */}
+          <div className="absolute inset-0 rounded-[50%] bg-gradient-to-b from-teal-light/40 to-teal-light/20" />
+          {/* Inner ellipse - even lighter */}
+          <div className="absolute inset-[5%] rounded-[50%] bg-gradient-to-b from-teal-light/30 to-transparent" />
+        </div>
+
         {/* Center student image */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 w-[350px] md:w-[480px]">
           <img
