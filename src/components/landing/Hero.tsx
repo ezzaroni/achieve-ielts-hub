@@ -1,6 +1,6 @@
 import { MaxWidthWrapper } from "@/components/layout/MaxWidthWrapper";
 import { ArrowUpRight } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpeg";
+import heroImage from "@/assets/man-student.png";
 import studentsImage from "@/assets/students.png";
 import manStudentImage from "@/assets/man-student.png";
 
