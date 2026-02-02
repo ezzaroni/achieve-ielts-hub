@@ -100,7 +100,7 @@ export const Hero = () => {
             {/* Students Container - Positioned at bottom */}
             <div className="relative w-full max-w-6xl flex justify-center items-end px-4">
               {/* Combined Students Image */}
-              <div className="relative z-20 w-[90%] md:w-[80%]">
+              <div className="relative z-20 w-[65%] md:w-[55%]">
                 <img
                   src={studentsImage}
                   alt="Students"
