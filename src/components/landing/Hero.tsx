@@ -1,5 +1,7 @@
 import { MaxWidthWrapper } from "@/components/layout/MaxWidthWrapper";
 import { ArrowUpRight } from "lucide-react";
+import heroImage from "@/assets/hero-image.jpeg";
+import studentsImage from "@/assets/students.png";
 
 const CircularProgress = ({
   score,
@@ -55,6 +57,16 @@ export const Hero = () => {
           background: "linear-gradient(to bottom, hsl(200 69% 41%) 0%, hsl(var(--background)) 100%)",
         }}
       >
+        {/* Background Hero Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={heroImage}
+            alt="Hero Background"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-background" />
+        </div>
+
         {/* Background Big Text "achieved" - Split color and joined */}
         <div className="absolute inset-0 z-0 flex items-center justify-center select-none pointer-events-none transform -translate-y-[8vw]">
           <h1 className="text-[25vw] leading-none font-black tracking-tighter whitespace-nowrap flex items-center">
@@ -87,20 +99,11 @@ export const Hero = () => {
           <div className="relative flex-grow flex items-end justify-center">
             {/* Students Container - Positioned at bottom */}
             <div className="relative w-full max-w-6xl flex justify-center items-end px-4">
-              {/* Woman Image */}
-              <div className="relative z-20 w-[45%] md:w-[42%] -mr-12 md:-mr-20">
+              {/* Combined Students Image */}
+              <div className="relative z-20 w-[90%] md:w-[80%]">
                 <img
-                  src="https://i.ibb.co/VqnC6gV/woman-student.png"
-                  alt="Female Student"
-                  className="w-full object-contain translate-y-2"
-                />
-              </div>
-
-              {/* Man Image */}
-              <div className="relative z-10 w-[48%] md:w-[45%]">
-                <img
-                  src="https://i.ibb.co/vYm686K/man-student.png"
-                  alt="Male Student"
+                  src={studentsImage}
+                  alt="Students"
                   className="w-full object-contain translate-y-2"
                 />
               </div>
