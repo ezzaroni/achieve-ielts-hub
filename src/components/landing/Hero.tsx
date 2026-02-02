@@ -1,7 +1,7 @@
 import { MaxWidthWrapper } from "@/components/layout/MaxWidthWrapper";
 import { ArrowUpRight } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpeg";
-import studentsImage from "@/assets/students.png";
+
 
 const CircularProgress = ({
   score,
@@ -99,11 +99,20 @@ export const Hero = () => {
           <div className="relative flex-grow flex items-end justify-center">
             {/* Students Container - Positioned at bottom */}
             <div className="relative w-full max-w-6xl flex justify-center items-end px-4">
-              {/* Combined Students Image */}
-              <div className="relative z-20 w-[45%] md:w-[38%]">
+              {/* Woman Image */}
+              <div className="relative z-20 w-[35%] md:w-[30%] -mr-8 md:-mr-12">
                 <img
-                  src={studentsImage}
-                  alt="Students"
+                  src="https://i.ibb.co/VqnC6gV/woman-student.png"
+                  alt="Female Student"
+                  className="w-full object-contain translate-y-2"
+                />
+              </div>
+
+              {/* Man Image */}
+              <div className="relative z-10 w-[38%] md:w-[32%]">
+                <img
+                  src="https://i.ibb.co/vYm686K/man-student.png"
+                  alt="Male Student"
                   className="w-full object-contain translate-y-2"
                 />
               </div>
