@@ -1,6 +1,5 @@
 import { MaxWidthWrapper } from "@/components/layout/MaxWidthWrapper";
 import { ArrowUpRight } from "lucide-react";
-import heroImage from "@/assets/man-student.png";
 import studentsImage from "@/assets/students.png";
 import manStudentImage from "@/assets/man-student.png";
 
@@ -58,13 +57,8 @@ export const Hero = () => {
           background: "linear-gradient(to bottom, hsl(200 69% 41%) 0%, hsl(var(--background)) 100%)",
         }}
       >
-        {/* Background Hero Image */}
+        {/* Background Gradient Overlay */}
         <div className="absolute inset-0 z-0">
-          <img
-            src={heroImage}
-            alt="Hero Background"
-            className="w-full h-full object-cover opacity-20"
-          />
           <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-background" />
         </div>
 
