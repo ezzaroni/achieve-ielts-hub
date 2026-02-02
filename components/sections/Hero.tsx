@@ -1,0 +1,180 @@
+import React from 'react';
+import { MaxWidthWrapper } from '../../layout/MaxWidthWrapper';
+import { ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const CircularProgress = ({ score, color, label }: { score: number, color: string, label: string }) => {
+  return (
+    <div className="flex flex-col items-center">
+      <div className="relative w-8 h-8 md:w-11 md:h-11 flex items-center justify-center">
+        <svg className="w-full h-full transform -rotate-90">
+          <circle
+            cx="50%"
+            cy="50%"
+            r="42%"
+            stroke="#e5e7eb"
+            strokeWidth="3"
+            fill="transparent"
+            className="opacity-20"
+          />
+          <circle
+            cx="50%"
+            cy="50%"
+            r="42%"
+            stroke={color}
+            strokeWidth="3"
+            fill="transparent"
+            strokeDasharray="100"
+            strokeDashoffset={100 - score}
+            strokeLinecap="round"
+          />
+        </svg>
+        <span className="absolute text-[10px] md:text-xs font-bold text-gray-800">{score}</span>
+      </div>
+      <span className="text-[8px] md:text-[9px] mt-1 text-gray-500 font-medium">{label}</span>
+    </div>
+  );
+};
+
+export const Hero: React.FC = () => {
+  return (
+    <>
+      <section 
+        className="relative w-full min-h-[90vh] pt-32 pb-0 overflow-hidden"
+        style={{ background: 'linear-gradient(to bottom, #1B79A8 0%, #FFFFFF 100%)' }}
+      >
+        {/* Background Big Text "achieved" - Split color and joined */}
+        <div className="absolute inset-0 z-0 flex items-center justify-center select-none pointer-events-none transform -translate-y-[8vw]">
+          <h1 className="text-[25vw] leading-none font-black tracking-tighter whitespace-nowrap flex items-center">
+            <span className="text-white">achie</span>
+            <span className="text-primary relative">
+              ved
+              {/* 'test' Badge */}
+              <div className="absolute top-[2vw] -right-[2vw] bg-[#FDCB58] text-[#1B6CA8] text-[2.5vw] font-bold px-4 py-1 rounded-2xl shadow-xl transform rotate-6 border-2 border-white/20">
+                test
+              </div>
+            </span>
+          </h1>
+        </div>
+
+        <MaxWidthWrapper className="relative z-10 h-full flex flex-col min-h-[calc(90vh-128px)]">
+          
+          {/* Top Floating Elements */}
+          <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+            {/* Boost Your Brain Pill */}
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="absolute top-0 left-0 border border-white/40 bg-white/5 backdrop-blur-sm text-white px-6 py-2 rounded-full text-xs font-light tracking-wide hidden lg:block"
+            >
+              Boost Your Brain
+            </motion.div>
+
+            {/* Boost Your Score Pill */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="absolute top-[40%] right-[-2%] border border-white/20 text-white/20 px-10 py-5 rounded-full text-sm tracking-widest hidden lg:block rotate-[-5deg]"
+            >
+              Boost Your Score
+            </motion.div>
+          </div>
+
+          {/* Main Content Area: Students and Floating Cards */}
+          <div className="relative flex-grow flex items-end justify-center">
+            
+            {/* Students Container - Positioned at bottom */}
+            <div className="relative w-full max-w-6xl flex justify-center items-end px-4">
+              
+              {/* Woman Image */}
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="relative z-20 w-[45%] md:w-[42%] -mr-12 md:-mr-20"
+              >
+                <img 
+                  src="https://i.ibb.co/VqnC6gV/woman-student.png" 
+                  alt="Female Student" 
+                  className="w-full object-contain translate-y-2"
+                />
+              </motion.div>
+
+              {/* Man Image */}
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+                className="relative z-10 w-[48%] md:w-[45%]"
+              >
+                <img 
+                  src="https://i.ibb.co/vYm686K/man-student.png" 
+                  alt="Male Student" 
+                  className="w-full object-contain translate-y-2"
+                />
+              </motion.div>
+
+              {/* Floating UI: Comunicative Skill (Glassmorphism) */}
+              <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6 }}
+                className="absolute left-0 bottom-[30%] bg-white/40 backdrop-blur-2xl border border-white/50 p-4 md:p-6 rounded-[2.5rem] z-30 shadow-2xl max-w-[220px] md:max-w-[280px]"
+              >
+                <div className="text-[#1B6CA8] font-semibold text-xs md:text-sm mb-4">Comunicative Skill</div>
+                <div className="flex justify-between gap-1 md:gap-3">
+                  <CircularProgress score={90} label="Writing" color="#FFB800" />
+                  <CircularProgress score={80} label="Speaking" color="#FF5B5B" />
+                  <CircularProgress score={75} label="Listening" color="#8A70D6" />
+                  <CircularProgress score={85} label="Reading" color="#2ACCC8" />
+                </div>
+              </motion.div>
+
+              {/* Floating UI: Student Joined (Bottom Left) */}
+              <div className="absolute bottom-10 left-0 z-30 flex flex-col items-start gap-4">
+                <div className="flex items-center gap-3">
+                  <div className="flex -space-x-3">
+                    <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-primary border-2 border-white overflow-hidden shadow-sm"><img src="https://i.pravatar.cc/100?u=1" className="w-full h-full object-cover" alt="User" /></div>
+                    <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-[#9E86C8] border-2 border-white overflow-hidden shadow-sm"><img src="https://i.pravatar.cc/100?u=2" className="w-full h-full object-cover" alt="User" /></div>
+                    <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-[#FDCB58] border-2 border-white overflow-hidden shadow-sm"><img src="https://i.pravatar.cc/100?u=3" className="w-full h-full object-cover" alt="User" /></div>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xl md:text-3xl font-bold text-primary leading-none">300+</span>
+                    <span className="text-primary/70 text-[9px] md:text-xs font-semibold">Student Joined</span>
+                  </div>
+                </div>
+                <div className="max-w-[180px] text-gray-500 text-[10px] leading-relaxed hidden md:block opacity-80">
+                  The world's most effective preparation platform. Guaranteed high scores via former examiner feedback.
+                </div>
+              </div>
+
+              {/* Floating UI: Start Free Now (Bottom Right) */}
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.7 }}
+                className="absolute bottom-10 right-0 z-30"
+              >
+                <button className="bg-primary hover:bg-[#155a8a] text-white pl-8 pr-2 py-2 rounded-full flex items-center gap-6 shadow-2xl transition-all group border border-white/10">
+                  <span className="text-base md:text-xl font-medium">Start Free Now</span>
+                  <span className="w-10 h-10 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center text-primary group-hover:rotate-45 transition-transform duration-300 shadow-inner">
+                    <ArrowUpRight className="w-5 h-5 md:w-7 md:h-7 stroke-[3]" />
+                  </span>
+                </button>
+              </motion.div>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </section>
+
+      {/* Transition Bar */}
+      <div className="bg-black py-6 flex justify-center relative z-50">
+        <button className="border border-white/10 text-white/50 text-[10px] md:text-xs px-6 py-2 rounded-full hover:bg-white/5 transition tracking-wide font-light">
+          Meet Achieved, Your Study Buddy.
+        </button>
+      </div>
+    </>
+  );
+};

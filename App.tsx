@@ -1,32 +1,28 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import LogoMarquee from './components/LogoMarquee';
-import ProgramSection from './components/ProgramSection';
-import AchievedSection from './components/AchievedSection';
-import StudyBuddySection from './components/StudyBuddySection';
-import FooterStrip from './components/FooterStrip';
+import { Navbar } from './components/sections/Navbar';
+import { Hero } from './components/sections/Hero';
+import { ValueCards } from './components/sections/ValueCards';
+import { FeatureSection } from './components/sections/FeatureSection';
+import { TestModules } from './components/sections/TestModules';
+import { FAQ } from './components/sections/FAQ';
+import { Blog } from './components/sections/Blog';
+import { Footer } from './components/sections/Footer';
 
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen bg-white text-slate-800 overflow-x-hidden">
-      {/* Updated Gradient to be brighter and more vibrant */}
-      <div className="relative bg-gradient-to-b from-[#2094a0] via-[#48a9b9] to-[#dcfce7] rounded-b-[40px] md:rounded-b-[80px] overflow-hidden">
-        {/* Dot pattern overlay */}
-        <div className="absolute inset-0 bg-dot-pattern pointer-events-none opacity-50"></div>
-        
-        <Header />
-        <Hero />
-      </div>
-      
+    <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-primary selection:text-white">
+      <Navbar />
       <main>
-        <LogoMarquee />
-        <ProgramSection />
-        <AchievedSection />
-        <StudyBuddySection />
+        <Hero />
+        <ValueCards />
+        <FeatureSection />
+        <TestModules />
+        <FAQ />
+        <Blog />
       </main>
-      
-      <FooterStrip />
+      <Footer />
     </div>
   );
 }
+
+export default App;

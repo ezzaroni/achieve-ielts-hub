@@ -1,0 +1,93 @@
+import React from 'react';
+import { MaxWidthWrapper } from '../../layout/MaxWidthWrapper';
+import { ArrowRight } from 'lucide-react';
+import { cn } from '../../lib/utils';
+import { motion } from 'framer-motion';
+
+interface FeatureProps {
+    title: string;
+    description: string;
+    cta: string;
+    align: 'left' | 'right';
+    imageGrid?: boolean;
+    mainImage?: string;
+}
+
+const FeatureItem: React.FC<FeatureProps> = ({ title, description, cta, align, imageGrid, mainImage }) => {
+    return (
+        <div className={cn("flex flex-col gap-12 md:gap-24 items-center py-20", align === 'right' ? 'md:flex-row-reverse' : 'md:flex-row')}>
+            {/* Image Side */}
+            <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="w-full md:w-1/2 relative"
+            >
+                {imageGrid ? (
+                    <div className="grid grid-cols-2 gap-4">
+                         <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&q=80&w=400" className="rounded-2xl h-40 w-full object-cover shadow-lg translate-y-8" alt="student" />
+                         <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&q=80&w=400" className="rounded-2xl h-40 w-full object-cover shadow-lg" alt="student" />
+                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600" className="col-span-2 rounded-2xl h-48 w-full object-cover shadow-lg" alt="group" />
+                    </div>
+                ) : (
+                    <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-gray-200 aspect-[4/3]">
+                         <img src={mainImage} alt={title} className="w-full h-full object-cover" />
+                         
+                         {/* Decorative UI elements overlay */}
+                         <div className="absolute top-4 right-4 bg-white/90 backdrop-blur p-3 rounded-xl shadow-lg">
+                            <div className="w-8 h-8 rounded-full border-4 border-green-500 flex items-center justify-center text-[10px] font-bold">7.5</div>
+                         </div>
+                    </div>
+                )}
+            </motion.div>
+
+            {/* Text Side */}
+            <div className="w-full md:w-1/2">
+                <div className="inline-block border border-gray-200 bg-white px-3 py-1 rounded-full text-xs text-gray-500 mb-6">
+                    Meet Achieved, Your Study Buddy.
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">{title}</h2>
+                <p className="text-gray-600 text-lg leading-relaxed mb-8 max-w-lg">
+                    {description}
+                </p>
+                <a href="#" className="inline-flex items-center text-gray-900 font-semibold hover:text-primary transition-colors group">
+                    {cta}
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+            </div>
+        </div>
+    );
+}
+
+export const FeatureSection: React.FC = () => {
+  return (
+    <section className="bg-gray-50 py-20 overflow-hidden">
+        <MaxWidthWrapper>
+            <FeatureItem 
+                align="left"
+                title="Live Interactive Classes"
+                description="Don't study alone. Join our live group sessions to practice conversation, build confidence, and get real-time corrections from expert tutors and peers from around the world."
+                cta="Join a Class"
+                imageGrid={true}
+            />
+            
+            <FeatureItem 
+                align="right"
+                title="Personalized Curriculum"
+                description="Whether you need a Band 6.0 for university or 8.0 for migration, our adaptive curriculum focuses on your weak points so you don't waste time on what you already know."
+                cta="Build My Plan"
+                mainImage="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1000"
+            />
+
+            <FeatureItem 
+                align="left"
+                title="Progress Tracking"
+                description="Stop guessing your score. Our intelligent dashboard visualizes your daily improvements across all four skills, predicting your IELTS band score with high accuracy."
+                cta="View Analytics"
+                mainImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000"
+            />
+        </MaxWidthWrapper>
+    </section>
+  );
+};
