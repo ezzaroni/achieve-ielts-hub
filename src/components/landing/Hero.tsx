@@ -108,7 +108,7 @@ export const Hero = () => {
                 </div>
 
                 {/* Student Joined Card */}
-                <div className="backdrop-blur-md p-3 md:p-4 rounded-xl mt-10 bg-white/0 border-white/0 border-0">
+                <div className="backdrop-blur-md p-3 md:p-4 rounded-xl mt-16 bg-white/0 border-white/0 border-0">
                   <div className="flex items-center gap-2">
                     <div className="flex -space-x-2">
                       <div className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-primary border-2 border-white overflow-hidden shadow-sm">
