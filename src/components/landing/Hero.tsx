@@ -95,7 +95,7 @@ export const Hero = () => {
                 </div>
 
                 {/* Comunicative Skill Card */}
-                <div className="backdrop-blur-xl border border-white/60 p-3 md:p-4 shadow-2xl rounded-3xl bg-[#c9dce4]/[0.77]">
+                <div className="backdrop-blur-xl border border-white/60 p-3 md:p-4 shadow-2xl rounded-3xl bg-[#c9dce4]/[0.67]">
                   <div className="text-primary font-semibold text-xs md:text-sm mb-3">
                     Comunicative Skill
                   </div>
