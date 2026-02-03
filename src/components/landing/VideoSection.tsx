@@ -8,7 +8,7 @@ export const VideoSection = () => {
       {/* Full Width Video Container */}
       <div className="relative w-full">
         {/* Video Image */}
-        <div className="relative aspect-video w-full">
+        <div className="relative aspect-video w-full rounded-t-[2rem] md:rounded-t-[3rem] overflow-hidden">
           <img
             src={videoClassroom}
             alt="IELTS Training Classroom"
@@ -16,7 +16,7 @@ export const VideoSection = () => {
           />
           
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent rounded-t-[2rem] md:rounded-t-[3rem]" />
           
           {/* Play Button */}
           <button className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-2xl z-10" style={{ backgroundColor: '#156790' }}>
