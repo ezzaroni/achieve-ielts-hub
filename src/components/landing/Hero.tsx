@@ -43,7 +43,7 @@ export const Hero = () => {
 
         {/* Background Big Text "achieved" */}
         <div className="absolute inset-0 z-0 flex items-center justify-center select-none pointer-events-none transform -translate-y-[8vw]">
-          <h1 className="text-[22vw] leading-none font-display font-bold tracking-tighter whitespace-nowrap flex items-center">
+          <h1 className="text-[20vw] leading-none font-display font-bold tracking-tighter whitespace-nowrap flex items-center">
             <span style={{ color: '#EDF9FF' }}>achie</span>
             <span style={{ color: '#1B79A8' }}>ved</span>
           </h1>
