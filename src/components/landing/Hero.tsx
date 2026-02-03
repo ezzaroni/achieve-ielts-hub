@@ -84,7 +84,7 @@ export const Hero = () => {
               </div>
 
               {/* Left Side Container: Learn Practies + Skills Card + Student Joined */}
-              <div className="absolute left-0 bottom-[2%] z-30 flex flex-col items-start gap-4">
+              <div className="absolute left-0 bottom-[6%] z-30 flex flex-col items-start gap-4">
                 {/* Learn Practies Text with Arrow */}
                 <div className="flex items-end gap-2 ml-2">
                   <div className="flex items-baseline gap-1.5">
@@ -95,7 +95,7 @@ export const Hero = () => {
                 </div>
 
                 {/* Comunicative Skill Card */}
-                <div className="backdrop-blur-xl border border-white/60 p-3 md:p-4 shadow-2xl rounded-3xl bg-[#c9dce4]/[0.67]">
+                <div className="backdrop-blur-xl p-3 md:p-4 shadow-2xl rounded-3xl bg-[#c9dce4]/[0.67] border-4 border-white/35">
                   <div className="text-primary font-semibold text-xs md:text-sm mb-3">
                     Comunicative Skill
                   </div>
