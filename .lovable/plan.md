@@ -1,44 +1,64 @@
 
 
-## Rencana Perbaikan Layout Hero Section
+## Rencana: Menambahkan Section Video
 
-Berdasarkan gambar referensi, ada beberapa elemen yang perlu diperbaiki agar tampilan lebih rapi:
+Berdasarkan gambar referensi, saya akan menambahkan section video baru yang terletak antara section **ValueCards** ("Meet Achieved, Your Study Buddy.") dan section **TestModules** ("Free IELTS Online Tests For Practicing").
 
-### Perubahan yang Akan Dilakukan
+---
 
-#### 1. Menambahkan Teks "Learn Practies" dengan Panah
-- Menambahkan teks "Learn" (biru teal) dan "Practies" (kuning/orange) dengan styling yang sesuai
-- Menambahkan icon panah melengkung yang mengarah ke card Comunicative Skill
-- Posisi di atas card Comunicative Skill
+### Tampilan yang Akan Dibuat
 
-#### 2. Memperbaiki Card Comunicative Skill
-- Memperbesar ukuran card agar lebih jelas
-- Memperbesar ukuran circular progress indicators
-- Memperbaiki spacing dan padding
-- Menambahkan background yang lebih solid (putih dengan opacity lebih tinggi)
+Section ini akan menampilkan:
+- Gambar video classroom dengan overlay gradien gelap di bagian bawah
+- Tombol play di tengah gambar
+- Teks besar "achieved" dengan warna split (#EDF9FF untuk "achie" dan #1B79A8 untuk "ved")
+- Teks deskripsi di bawah: "Automated grading can't catch the nuance of Band 8.0 English. That's why we've put real human examiners, detailed writing feedback, and live speaking practice at the core of everything we do."
 
-#### 3. Memperbaiki Section "300+ Student Joined"
-- Memposisikan ulang agar berada di bawah card Comunicative Skill
-- Menambahkan background card dengan glass-morphism effect
-- Memperbaiki layout avatar dan teks agar lebih rapi
-- Menambahkan teks deskriptif di bawahnya
+---
+
+### File yang Akan Dibuat/Diubah
+
+| File | Aksi |
+|------|------|
+| `src/assets/video-classroom.png` | Copy gambar yang di-upload |
+| `src/components/landing/VideoSection.tsx` | Buat komponen baru untuk section video |
+| `src/pages/Index.tsx` | Import dan tambahkan VideoSection antara ValueCards dan FeatureSection |
+
+---
 
 ### Detail Teknis
 
-**File yang akan diubah:** `src/components/landing/Hero.tsx`
+**1. Struktur VideoSection Component:**
+```text
++------------------------------------------+
+|                                          |
+|     [Gambar Classroom dengan overlay]    |
+|                                          |
+|              [Play Button]               |
+|                                          |
+|            "achieved" (large text)       |
+|                                          |
+|    [Deskripsi tentang human examiners]   |
+|                                          |
++------------------------------------------+
+```
 
-**Perubahan spesifik:**
-1. Menambahkan komponen teks "Learn Practies" dengan icon curved arrow
-2. Mengupdate styling card Comunicative Skill:
-   - Memperbesar ukuran circular progress (dari w-8/w-11 ke w-12/w-14)
-   - Memperbesar font size score dan label
-   - Meningkatkan padding card
-3. Menggabungkan card Comunicative Skill dan Student Joined dalam satu container di kiri
-4. Menyesuaikan posisi dan gap antar elemen
+**2. Styling:**
+- Background gelap (#1B1B1B) sama seperti ValueCards
+- Gambar dengan aspect ratio 16:9 atau serupa
+- Overlay gradien dari transparan ke gelap di bagian bawah gambar
+- Teks "achieved" menggunakan font-display, bold, ukuran besar (~10-12vw)
+- Play button dengan icon Play, background teal (#156790), rounded full
+- Responsive untuk mobile dan desktop
 
-### Preview Hasil
-- Teks "Learn Practies" dengan panah akan muncul di atas card skills
-- Card Comunicative Skill dengan circular progress yang lebih besar dan jelas
-- Section Student Joined dengan layout yang lebih rapi di bawah card skills
-- Semua elemen tersusun secara vertikal di sisi kiri
+**3. Urutan Section di Index.tsx:**
+```
+Hero -> ValueCards -> VideoSection -> FeatureSection -> TestModules -> FAQ -> Blog -> Footer
+```
+
+---
+
+### Hasil Akhir
+
+Section video akan memberikan transisi visual yang menarik antara ValueCards dan FeatureSection, menampilkan suasana kelas IELTS dan menekankan pendekatan human-centered dari platform Achieved.
 
