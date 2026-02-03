@@ -48,7 +48,7 @@ export const Hero = () => {
             <span className="text-primary relative">
               ved
               {/* 'test' Badge */}
-              <div className="absolute top-[2vw] -right-[2vw] bg-secondary text-primary text-[2.5vw] font-bold px-4 py-1 rounded-2xl shadow-xl transform rotate-6 border-2 border-white/20">
+              <div className="absolute top-[2vw] -right-[2vw] bg-secondary text-primary text-[2vw] font-bold px-3 py-0.5 rounded-xl shadow-xl transform rotate-6 border-2 border-white/20">
                 test
               </div>
             </span>
