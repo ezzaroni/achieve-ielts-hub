@@ -1,5 +1,6 @@
 import { MaxWidthWrapper } from "@/components/layout/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
+import noiseTexture from "@/assets/noise-texture.png";
 
 export const ValueCards = () => {
   return (
@@ -24,9 +25,17 @@ export const ValueCards = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1 - Insider Knowledge */}
           <div 
-            className="p-8 h-[380px] flex flex-col justify-between"
+            className="p-8 h-[380px] flex flex-col justify-between relative overflow-hidden"
             style={{ backgroundColor: '#3B3B3B', borderRadius: '50px' }}
           >
+            <div 
+              className="absolute inset-0 opacity-10 pointer-events-none"
+              style={{ 
+                backgroundImage: `url(${noiseTexture})`,
+                backgroundSize: 'cover',
+                borderRadius: '50px'
+              }}
+            />
             <div>
               <h3 className="text-2xl font-bold mb-4 text-white">
                 Insider Knowledge<br />
@@ -46,9 +55,17 @@ export const ValueCards = () => {
 
           {/* Card 2 - Zero Surprises */}
           <div 
-            className="p-8 h-[380px] flex flex-col justify-between"
+            className="p-8 h-[380px] flex flex-col justify-between relative overflow-hidden"
             style={{ backgroundColor: '#156790', borderRadius: '50px' }}
           >
+            <div 
+              className="absolute inset-0 opacity-10 pointer-events-none"
+              style={{ 
+                backgroundImage: `url(${noiseTexture})`,
+                backgroundSize: 'cover',
+                borderRadius: '50px'
+              }}
+            />
             <div>
               <h3 className="text-2xl font-bold mb-4 text-white">
                 Zero Surprises on<br />
@@ -67,9 +84,17 @@ export const ValueCards = () => {
 
           {/* Card 3 - Instant Precision Feedback */}
           <div 
-            className="p-8 h-[380px] flex flex-col justify-between"
+            className="p-8 h-[380px] flex flex-col justify-between relative overflow-hidden"
             style={{ backgroundColor: '#D9D9D9', borderRadius: '50px' }}
           >
+            <div 
+              className="absolute inset-0 opacity-10 pointer-events-none"
+              style={{ 
+                backgroundImage: `url(${noiseTexture})`,
+                backgroundSize: 'cover',
+                borderRadius: '50px'
+              }}
+            />
             <div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">
                 The Feedback Instant,<br />
