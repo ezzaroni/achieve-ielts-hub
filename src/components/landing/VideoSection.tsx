@@ -27,16 +27,16 @@ export const VideoSection = () => {
           <div className="absolute bottom-0 left-0 right-0 pb-8 md:pb-12 lg:pb-16 z-10">
             <MaxWidthWrapper>
               {/* Achieved Text */}
-              <div className="flex justify-center mb-4 md:mb-6">
-                <h2 className="text-[12vw] md:text-[10vw] leading-none font-display font-bold tracking-tighter">
+              <div className="flex justify-center mb-3 md:mb-4">
+                <h2 className="text-[18vw] md:text-[15vw] leading-none font-display font-bold tracking-tighter">
                   <span style={{ color: '#EDF9FF' }}>achie</span>
                   <span style={{ color: '#1B79A8' }}>ved</span>
                 </h2>
               </div>
 
               {/* Description Text */}
-              <div className="max-w-4xl mx-auto text-center">
-                <p className="text-white/80 text-sm md:text-base lg:text-lg leading-relaxed">
+              <div className="max-w-3xl mx-auto text-center">
+                <p className="text-white/70 text-xs md:text-sm leading-relaxed">
                   Automated grading can't catch the nuance of Band 8.0 English. That's why we've put real human examiners, detailed writing feedback, and live speaking practice at the core of everything we do.
                 </p>
               </div>
