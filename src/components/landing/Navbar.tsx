@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { MaxWidthWrapper } from "@/components/layout/MaxWidthWrapper";
 import { cn } from "@/lib/utils";
+import logoAchieved from "@/assets/logo-achieved.png";
+
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -27,13 +29,11 @@ export const Navbar = () => {
       <MaxWidthWrapper className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 relative">
-            
-          </div>
-          <span className={cn("text-xl font-bold tracking-tight", isScrolled ? "text-foreground" : "text-white")}>
-            achieved
-            <span className="font-light opacity-60">.test</span>
-          </span>
+          <img 
+            src={logoAchieved} 
+            alt="Achieved Logo" 
+            className="h-8 w-auto"
+          />
         </div>
 
         {/* Desktop Nav */}
