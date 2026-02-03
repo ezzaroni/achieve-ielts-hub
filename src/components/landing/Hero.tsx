@@ -152,12 +152,5 @@ export const Hero = () => {
           </div>
         </MaxWidthWrapper>
       </section>
-
-      {/* Transition Bar */}
-      <div className="bg-foreground py-6 flex justify-center relative z-50">
-        <button className="border border-white/10 text-white/50 text-[10px] md:text-xs px-6 py-2 rounded-full hover:bg-white/5 transition tracking-wide font-light">
-          Meet Achieved, Your Study Buddy.
-        </button>
-      </div>
     </>;
 };
