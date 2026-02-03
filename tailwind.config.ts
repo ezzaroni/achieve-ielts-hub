@@ -70,6 +70,7 @@ export default {
       },
       fontFamily: {
         sans: ["Arial", "Helvetica", "sans-serif"],
+        display: ["Inter", "Arial", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
