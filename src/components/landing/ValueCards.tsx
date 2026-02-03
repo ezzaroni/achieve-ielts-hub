@@ -29,7 +29,7 @@ export const ValueCards = () => {
             style={{ backgroundColor: '#3B3B3B', borderRadius: '50px' }}
           >
             <div 
-              className="absolute inset-0 opacity-10 pointer-events-none"
+              className="absolute inset-0 opacity-50 pointer-events-none"
               style={{ 
                 backgroundImage: `url(${noiseTexture})`,
                 backgroundSize: 'cover',
@@ -59,7 +59,7 @@ export const ValueCards = () => {
             style={{ backgroundColor: '#156790', borderRadius: '50px' }}
           >
             <div 
-              className="absolute inset-0 opacity-10 pointer-events-none"
+              className="absolute inset-0 opacity-50 pointer-events-none"
               style={{ 
                 backgroundImage: `url(${noiseTexture})`,
                 backgroundSize: 'cover',
@@ -88,7 +88,7 @@ export const ValueCards = () => {
             style={{ backgroundColor: '#D9D9D9', borderRadius: '50px' }}
           >
             <div 
-              className="absolute inset-0 opacity-10 pointer-events-none"
+              className="absolute inset-0 opacity-50 pointer-events-none"
               style={{ 
                 backgroundImage: `url(${noiseTexture})`,
                 backgroundSize: 'cover',
