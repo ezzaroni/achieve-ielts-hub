@@ -79,7 +79,7 @@ export const Hero = () => {
               </div>
               
               {/* Man Student Image */}
-              <div className="relative z-30 w-[54%] md:w-[46%] -ml-10 md:-ml-16">
+              <div className="relative z-30 w-[58%] md:w-[50%] -ml-10 md:-ml-16">
                 <img alt="Man Student" className="w-full object-contain translate-y-2" src="/lovable-uploads/89b1756f-102f-4315-90b1-b0fe41148367.png" />
               </div>
 
