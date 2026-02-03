@@ -46,8 +46,8 @@ export const ValueCards = () => {
 
           {/* Card 2 - Zero Surprises */}
           <div 
-            className="rounded-3xl p-8 h-[380px] flex flex-col justify-between"
-            style={{ backgroundColor: '#156790' }}
+            className="p-8 h-[380px] flex flex-col justify-between"
+            style={{ backgroundColor: '#156790', borderRadius: '50px' }}
           >
             <div>
               <h3 className="text-2xl font-bold mb-4 text-white">
@@ -67,8 +67,8 @@ export const ValueCards = () => {
 
           {/* Card 3 - Instant Precision Feedback */}
           <div 
-            className="rounded-3xl p-8 h-[380px] flex flex-col justify-between"
-            style={{ backgroundColor: '#D9D9D9' }}
+            className="p-8 h-[380px] flex flex-col justify-between"
+            style={{ backgroundColor: '#D9D9D9', borderRadius: '50px' }}
           >
             <div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">
