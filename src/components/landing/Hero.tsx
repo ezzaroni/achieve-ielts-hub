@@ -1,40 +1,20 @@
 import { MaxWidthWrapper } from "@/components/layout/MaxWidthWrapper";
 import { ArrowUpRight } from "lucide-react";
 import studentsImage from "@/assets/students.png";
-
 const CircularProgress = ({
   score,
   color,
-  label,
+  label
 }: {
   score: number;
   color: string;
   label: string;
 }) => {
-  return (
-    <div className="flex flex-col items-center">
+  return <div className="flex flex-col items-center">
       <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
         <svg className="w-full h-full transform -rotate-90">
-          <circle
-            cx="50%"
-            cy="50%"
-            r="42%"
-            stroke="hsl(var(--muted))"
-            strokeWidth="4"
-            fill="transparent"
-            className="opacity-20"
-          />
-          <circle
-            cx="50%"
-            cy="50%"
-            r="42%"
-            stroke={color}
-            strokeWidth="4"
-            fill="transparent"
-            strokeDasharray="100"
-            strokeDashoffset={100 - score}
-            strokeLinecap="round"
-          />
+          <circle cx="50%" cy="50%" r="42%" stroke="hsl(var(--muted))" strokeWidth="4" fill="transparent" className="opacity-20" />
+          <circle cx="50%" cy="50%" r="42%" stroke={color} strokeWidth="4" fill="transparent" strokeDasharray="100" strokeDashoffset={100 - score} strokeLinecap="round" />
         </svg>
         <span className="absolute text-sm md:text-base font-bold text-foreground">
           {score}
@@ -43,45 +23,19 @@ const CircularProgress = ({
       <span className="text-[10px] md:text-xs mt-1.5 text-muted-foreground font-medium">
         {label}
       </span>
-    </div>
-  );
+    </div>;
 };
 
 // Curved arrow SVG component
-const CurvedArrow = () => (
-  <svg
-    width="60"
-    height="40"
-    viewBox="0 0 60 40"
-    fill="none"
-    className="text-primary"
-  >
-    <path
-      d="M5 5C15 5 45 5 50 25"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeDasharray="4 4"
-    />
-    <path
-      d="M45 20L50 25L55 20"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
+const CurvedArrow = () => <svg width="60" height="40" viewBox="0 0 60 40" fill="none" className="text-primary">
+    <path d="M5 5C15 5 45 5 50 25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeDasharray="4 4" />
+    <path d="M45 20L50 25L55 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>;
 export const Hero = () => {
-  return (
-    <>
-      <section
-        className="relative w-full min-h-screen pt-32 pb-0 overflow-hidden"
-        style={{
-          background: "linear-gradient(to bottom, hsl(200 69% 41%) 0%, hsl(var(--background)) 100%)",
-        }}
-      >
+  return <>
+      <section className="relative w-full min-h-screen pt-32 pb-0 overflow-hidden" style={{
+      background: "linear-gradient(to bottom, hsl(200 69% 41%) 0%, hsl(var(--background)) 100%)"
+    }}>
         {/* Background Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-background" />
@@ -121,20 +75,12 @@ export const Hero = () => {
             <div className="relative w-full max-w-6xl flex justify-center items-end px-4">
               {/* Woman Student Image */}
               <div className="relative z-20 w-[38%] md:w-[32%] -mr-6 md:-mr-10">
-                <img
-                  src={studentsImage}
-                  alt="Woman Student"
-                  className="w-full object-contain translate-y-2"
-                />
+                <img src={studentsImage} alt="Woman Student" className="w-full object-contain translate-y-2" />
               </div>
               
               {/* Second Woman Student Image */}
               <div className="relative z-10 w-[38%] md:w-[32%]">
-                <img
-                  src={studentsImage}
-                  alt="Woman Student"
-                  className="w-full object-contain translate-y-2 -scale-x-100"
-                />
+                <img src={studentsImage} alt="Woman Student" className="w-full object-contain translate-y-2 -scale-x-100" />
               </div>
 
               {/* Left Side Container: Learn Practies + Skills Card + Student Joined */}
@@ -162,29 +108,17 @@ export const Hero = () => {
                 </div>
 
                 {/* Student Joined Card */}
-                <div className="bg-white/20 backdrop-blur-md border border-white/20 p-4 md:p-5 rounded-2xl mt-10">
+                <div className="backdrop-blur-md border border-white/20 p-4 md:p-5 rounded-2xl mt-10 bg-white/0">
                   <div className="flex items-center gap-3">
                     <div className="flex -space-x-3">
                       <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary border-2 border-white overflow-hidden shadow-sm">
-                        <img
-                          src="https://i.pravatar.cc/100?u=1"
-                          className="w-full h-full object-cover"
-                          alt="User"
-                        />
+                        <img src="https://i.pravatar.cc/100?u=1" className="w-full h-full object-cover" alt="User" />
                       </div>
                       <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-purple-400 border-2 border-white overflow-hidden shadow-sm">
-                        <img
-                          src="https://i.pravatar.cc/100?u=2"
-                          className="w-full h-full object-cover"
-                          alt="User"
-                        />
+                        <img src="https://i.pravatar.cc/100?u=2" className="w-full h-full object-cover" alt="User" />
                       </div>
                       <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary border-2 border-white overflow-hidden shadow-sm">
-                        <img
-                          src="https://i.pravatar.cc/100?u=3"
-                          className="w-full h-full object-cover"
-                          alt="User"
-                        />
+                        <img src="https://i.pravatar.cc/100?u=3" className="w-full h-full object-cover" alt="User" />
                       </div>
                     </div>
                     <div className="flex flex-col">
@@ -225,6 +159,5 @@ export const Hero = () => {
           Meet Achieved, Your Study Buddy.
         </button>
       </div>
-    </>
-  );
+    </>;
 };
