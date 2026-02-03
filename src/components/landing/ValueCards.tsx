@@ -4,7 +4,7 @@ import noiseTexture from "@/assets/noise-texture.png";
 
 export const ValueCards = () => {
   return (
-    <section className="py-24 rounded-t-[3rem] -mt-10 relative z-40" style={{ backgroundColor: '#1B1B1B' }}>
+    <section className="py-24 relative z-40" style={{ backgroundColor: '#1B1B1B' }}>
       <MaxWidthWrapper>
         <div className="mb-12">
           <div className="inline-block border border-white/20 rounded-full px-4 py-1.5 text-xs text-white/60 mb-6">
