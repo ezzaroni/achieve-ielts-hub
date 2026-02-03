@@ -42,7 +42,7 @@ export const Hero = () => {
         </div>
 
         {/* Background Big Text "achieved" - Split color and joined */}
-        <div className="absolute inset-0 z-0 flex items-center justify-center select-none pointer-events-none transform -translate-y-[12vw]">
+        <div className="absolute inset-0 z-0 flex items-center justify-center select-none pointer-events-none transform -translate-y-[6vw]">
           <h1 className="text-[22vw] leading-none font-display font-bold tracking-tighter whitespace-nowrap flex items-center">
             <span className="text-white">achie</span>
             <span className="text-primary relative">
@@ -74,13 +74,13 @@ export const Hero = () => {
             {/* Students Container - Positioned at bottom */}
             <div className="relative w-full max-w-6xl flex justify-center items-end px-4">
               {/* Woman Student Image */}
-              <div className="relative z-20 w-[42%] md:w-[35%] -mr-6 md:-mr-10">
+              <div className="relative z-20 w-[38%] md:w-[32%] -mr-6 md:-mr-10">
                 <img src={studentsImage} alt="Woman Student" className="w-full object-contain translate-y-2" />
               </div>
               
               {/* Second Woman Student Image */}
-              <div className="relative z-10 w-[42%] md:w-[35%]">
-                <img src={studentsImage} alt="Woman Student" className="w-full object-contain translate-y-2 -scale-x-100" />
+              <div className="relative z-10 w-[38%] md:w-[32%]">
+                <img alt="Woman Student" className="w-full object-contain translate-y-2 -scale-x-100" src="/lovable-uploads/8fca314e-356d-48c5-888e-f2a4e204c9db.png" />
               </div>
 
               {/* Left Side Container: Learn Practies + Skills Card + Student Joined */}
@@ -95,7 +95,7 @@ export const Hero = () => {
                 </div>
 
                 {/* Comunicative Skill Card */}
-                <div className="backdrop-blur-xl p-3 md:p-4 shadow-2xl rounded-[2rem] bg-[#c9dce4]/[0.67] border-4 border-white/35">
+                <div className="backdrop-blur-xl p-3 md:p-4 shadow-2xl rounded-3xl bg-[#c9dce4]/[0.67] border-4 border-white/35">
                   <div className="text-primary font-semibold text-xs md:text-sm mb-3">
                     Comunicative Skill
                   </div>
