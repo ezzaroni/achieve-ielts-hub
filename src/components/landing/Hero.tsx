@@ -74,7 +74,7 @@ export const Hero = () => {
             {/* Students Container - Positioned at bottom */}
             <div className="relative w-full max-w-6xl flex justify-center items-end px-4">
               {/* Woman Student Image */}
-              <div className="relative z-20 w-[38%] md:w-[32%] -mr-6 md:-mr-10">
+              <div className="relative z-20 w-[44%] md:w-[38%] -mr-6 md:-mr-10">
                 <img alt="Woman Student" className="w-full object-contain translate-y-2" src="/lovable-uploads/f49bb1e9-4b64-48d2-8502-8e36e213280c.png" />
               </div>
               
