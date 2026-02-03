@@ -1,6 +1,6 @@
 import { MaxWidthWrapper } from "@/components/layout/MaxWidthWrapper";
 import { ArrowUpRight } from "lucide-react";
-
+import studentsImage from "@/assets/students.png";
 const CircularProgress = ({
   score,
   color,
@@ -79,8 +79,8 @@ export const Hero = () => {
               </div>
               
               {/* Second Woman Student Image */}
-              <div className="relative z-10 w-[48%] md:w-[40%]">
-                <img alt="Woman Student" className="w-full object-contain translate-y-2" src="/lovable-uploads/89b1756f-102f-4315-90b1-b0fe41148367.png" />
+              <div className="relative z-10 w-[38%] md:w-[32%]">
+                <img alt="Woman Student" className="w-full object-contain translate-y-2 -scale-x-100" src="/lovable-uploads/1cee19a7-787c-4de2-ad72-bd6673766444.png" />
               </div>
 
               {/* Left Side Container: Learn Practies + Skills Card + Student Joined */}
