@@ -25,7 +25,7 @@ export const ValueCards = () => {
           {/* Card 1 - Insider Knowledge */}
           <div 
             className="p-8 h-[380px] flex flex-col justify-between"
-            style={{ backgroundColor: '#3B3B3B', borderRadius: '60px' }}
+            style={{ backgroundColor: '#3B3B3B', borderRadius: '50px' }}
           >
             <div>
               <h3 className="text-2xl font-bold mb-4 text-white">
