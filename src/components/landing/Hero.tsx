@@ -108,29 +108,29 @@ export const Hero = () => {
                 </div>
 
                 {/* Student Joined Card */}
-                <div className="backdrop-blur-md p-4 md:p-5 rounded-2xl mt-10 bg-white/0 border-white/0 border-0">
-                  <div className="flex items-center gap-3">
-                    <div className="flex -space-x-3">
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary border-2 border-white overflow-hidden shadow-sm">
+                <div className="backdrop-blur-md p-3 md:p-4 rounded-xl mt-10 bg-white/0 border-white/0 border-0">
+                  <div className="flex items-center gap-2">
+                    <div className="flex -space-x-2">
+                      <div className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-primary border-2 border-white overflow-hidden shadow-sm">
                         <img src="https://i.pravatar.cc/100?u=1" className="w-full h-full object-cover" alt="User" />
                       </div>
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-purple-400 border-2 border-white overflow-hidden shadow-sm">
+                      <div className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-purple-400 border-2 border-white overflow-hidden shadow-sm">
                         <img src="https://i.pravatar.cc/100?u=2" className="w-full h-full object-cover" alt="User" />
                       </div>
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary border-2 border-white overflow-hidden shadow-sm">
+                      <div className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-secondary border-2 border-white overflow-hidden shadow-sm">
                         <img src="https://i.pravatar.cc/100?u=3" className="w-full h-full object-cover" alt="User" />
                       </div>
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-2xl md:text-3xl font-bold text-primary leading-none">
+                      <span className="text-xl md:text-2xl font-bold text-primary leading-none">
                         300+
                       </span>
-                      <span className="text-primary/70 text-xs font-semibold">
+                      <span className="text-primary/70 text-[10px] font-semibold">
                         Student Joined
                       </span>
                     </div>
                   </div>
-                  <p className="mt-3 max-w-[220px] text-muted-foreground text-[11px] leading-relaxed hidden md:block">
+                  <p className="mt-2 max-w-[180px] text-muted-foreground text-[9px] leading-relaxed hidden md:block">
                     The world's most effective preparation platform. Guaranteed high
                     scores via former examiner feedback.
                   </p>
