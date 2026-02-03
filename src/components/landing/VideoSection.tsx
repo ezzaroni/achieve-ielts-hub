@@ -28,7 +28,7 @@ export const VideoSection = () => {
             <MaxWidthWrapper>
               {/* Achieved Text */}
               <div className="flex justify-center mb-3 md:mb-4">
-                <h2 className="text-[18vw] md:text-[15vw] leading-none font-display font-bold tracking-tighter">
+                <h2 className="text-[22vw] md:text-[20vw] leading-none font-display font-bold tracking-tighter">
                   <span style={{ color: '#EDF9FF' }}>achie</span>
                   <span style={{ color: '#1B79A8' }}>ved</span>
                 </h2>
