@@ -84,7 +84,7 @@ export const Hero = () => {
               </div>
 
               {/* Left Side Container: Learn Practies + Skills Card + Student Joined */}
-              <div className="absolute left-0 bottom-[6%] z-30 flex flex-col items-start gap-4">
+              <div className="absolute left-0 bottom-[2%] z-30 flex flex-col items-start gap-4">
                 {/* Learn Practies Text with Arrow */}
                 <div className="flex items-end gap-2 ml-2">
                   <div className="flex items-baseline gap-1.5">
