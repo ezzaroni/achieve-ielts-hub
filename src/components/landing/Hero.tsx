@@ -162,7 +162,7 @@ export const Hero = () => {
                 </div>
 
                 {/* Student Joined Card */}
-                <div className="bg-white/60 backdrop-blur-xl border border-white/40 p-4 md:p-5 rounded-2xl shadow-xl">
+                <div className="bg-white/20 backdrop-blur-md border border-white/20 p-4 md:p-5 rounded-2xl mt-4">
                   <div className="flex items-center gap-3">
                     <div className="flex -space-x-3">
                       <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary border-2 border-white overflow-hidden shadow-sm">
