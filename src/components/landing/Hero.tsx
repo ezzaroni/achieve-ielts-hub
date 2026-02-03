@@ -70,7 +70,7 @@ export const Hero = () => {
           </div>
 
           {/* Main Content Area: Students and Floating Cards */}
-          <div className="relative flex-grow flex items-end justify-center">
+          <div className="absolute bottom-0 left-0 right-0 flex justify-center">
             {/* Students Container - Positioned at bottom */}
             <div className="relative w-full max-w-6xl flex justify-center items-end px-4">
               {/* Woman Student Image */}
