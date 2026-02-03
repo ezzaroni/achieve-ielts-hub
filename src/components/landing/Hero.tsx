@@ -75,12 +75,12 @@ export const Hero = () => {
             <div className="relative w-full max-w-6xl flex justify-center items-end px-4">
               {/* Woman Student Image */}
               <div className="relative z-20 w-[38%] md:w-[32%] -mr-6 md:-mr-10">
-                <img src={studentsImage} alt="Woman Student" className="w-full object-contain translate-y-2" />
+                <img alt="Woman Student" className="w-full object-contain translate-y-2" src="/lovable-uploads/f49bb1e9-4b64-48d2-8502-8e36e213280c.png" />
               </div>
               
               {/* Second Woman Student Image */}
               <div className="relative z-10 w-[38%] md:w-[32%]">
-                <img alt="Woman Student" className="w-full object-contain translate-y-2 -scale-x-100" src="/lovable-uploads/8fca314e-356d-48c5-888e-f2a4e204c9db.png" />
+                <img alt="Woman Student" className="w-full object-contain translate-y-2 -scale-x-100" src="/lovable-uploads/89b1756f-102f-4315-90b1-b0fe41148367.png" />
               </div>
 
               {/* Left Side Container: Learn Practies + Skills Card + Student Joined */}
