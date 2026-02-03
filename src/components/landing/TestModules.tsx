@@ -23,7 +23,7 @@ const ModuleCard = ({
   return (
     <Card
       className={cn(
-        "h-[400px] flex flex-col group transition-colors duration-300",
+        "h-[480px] md:h-[520px] flex flex-col group transition-colors duration-300 p-6",
         isDark
           ? "bg-foreground/80 text-background border-muted-foreground/20"
           : "bg-background text-foreground border-border"
