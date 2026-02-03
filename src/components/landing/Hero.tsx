@@ -62,8 +62,8 @@ export const Hero = () => {
         </div>
 
         {/* Background Big Text "achieved" - Split color and joined */}
-        <div className="absolute inset-0 z-0 flex items-center justify-center select-none pointer-events-none transform -translate-y-[8vw]">
-          <h1 className="text-[25vw] leading-none font-black tracking-tighter whitespace-nowrap flex items-center">
+        <div className="absolute inset-0 z-0 flex items-center justify-center select-none pointer-events-none transform -translate-y-[6vw]">
+          <h1 className="text-[20vw] leading-none font-black tracking-tighter whitespace-nowrap flex items-center">
             <span className="text-white">achie</span>
             <span className="text-primary relative">
               ved
