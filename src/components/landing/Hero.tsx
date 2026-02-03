@@ -13,14 +13,14 @@ const CircularProgress = ({
 }) => {
   return (
     <div className="flex flex-col items-center">
-      <div className="relative w-8 h-8 md:w-11 md:h-11 flex items-center justify-center">
+      <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
         <svg className="w-full h-full transform -rotate-90">
           <circle
             cx="50%"
             cy="50%"
             r="42%"
             stroke="hsl(var(--muted))"
-            strokeWidth="3"
+            strokeWidth="4"
             fill="transparent"
             className="opacity-20"
           />
@@ -29,23 +29,49 @@ const CircularProgress = ({
             cy="50%"
             r="42%"
             stroke={color}
-            strokeWidth="3"
+            strokeWidth="4"
             fill="transparent"
             strokeDasharray="100"
             strokeDashoffset={100 - score}
             strokeLinecap="round"
           />
         </svg>
-        <span className="absolute text-[10px] md:text-xs font-bold text-foreground">
+        <span className="absolute text-sm md:text-base font-bold text-foreground">
           {score}
         </span>
       </div>
-      <span className="text-[8px] md:text-[9px] mt-1 text-muted-foreground font-medium">
+      <span className="text-[10px] md:text-xs mt-1.5 text-muted-foreground font-medium">
         {label}
       </span>
     </div>
   );
 };
+
+// Curved arrow SVG component
+const CurvedArrow = () => (
+  <svg
+    width="60"
+    height="40"
+    viewBox="0 0 60 40"
+    fill="none"
+    className="text-primary"
+  >
+    <path
+      d="M5 5C15 5 45 5 50 25"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeDasharray="4 4"
+    />
+    <path
+      d="M45 20L50 25L55 20"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 export const Hero = () => {
   return (
@@ -111,57 +137,69 @@ export const Hero = () => {
                 />
               </div>
 
-              {/* Floating UI: Comunicative Skill (Glassmorphism) */}
-              <div className="absolute left-0 bottom-[30%] bg-white/40 backdrop-blur-2xl border border-white/50 p-4 md:p-6 rounded-[2.5rem] z-30 shadow-2xl max-w-[220px] md:max-w-[280px]">
-                <div className="text-primary font-semibold text-xs md:text-sm mb-4">
-                  Comunicative Skill
+              {/* Left Side Container: Learn Practies + Skills Card + Student Joined */}
+              <div className="absolute left-0 bottom-[15%] z-30 flex flex-col items-start gap-4">
+                {/* Learn Practies Text with Arrow */}
+                <div className="flex items-end gap-2 ml-2">
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-primary font-semibold text-lg md:text-xl">Learn</span>
+                    <span className="text-secondary font-semibold text-lg md:text-xl">Practies</span>
+                  </div>
+                  <CurvedArrow />
                 </div>
-                <div className="flex justify-between gap-1 md:gap-3">
-                  <CircularProgress score={90} label="Writing" color="#FFB800" />
-                  <CircularProgress score={80} label="Speaking" color="#FF5B5B" />
-                  <CircularProgress score={75} label="Listening" color="#8A70D6" />
-                  <CircularProgress score={85} label="Reading" color="#2ACCC8" />
-                </div>
-              </div>
 
-              {/* Floating UI: Student Joined (Bottom Left) */}
-              <div className="absolute bottom-10 left-0 z-30 flex flex-col items-start gap-4">
-                <div className="flex items-center gap-3">
-                  <div className="flex -space-x-3">
-                    <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-primary border-2 border-white overflow-hidden shadow-sm">
-                      <img
-                        src="https://i.pravatar.cc/100?u=1"
-                        className="w-full h-full object-cover"
-                        alt="User"
-                      />
-                    </div>
-                    <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-purple-400 border-2 border-white overflow-hidden shadow-sm">
-                      <img
-                        src="https://i.pravatar.cc/100?u=2"
-                        className="w-full h-full object-cover"
-                        alt="User"
-                      />
-                    </div>
-                    <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-secondary border-2 border-white overflow-hidden shadow-sm">
-                      <img
-                        src="https://i.pravatar.cc/100?u=3"
-                        className="w-full h-full object-cover"
-                        alt="User"
-                      />
-                    </div>
+                {/* Comunicative Skill Card */}
+                <div className="bg-white/80 backdrop-blur-xl border border-white/60 p-5 md:p-6 rounded-[2rem] shadow-2xl">
+                  <div className="text-primary font-semibold text-sm md:text-base mb-4">
+                    Comunicative Skill
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-xl md:text-3xl font-bold text-primary leading-none">
-                      300+
-                    </span>
-                    <span className="text-primary/70 text-[9px] md:text-xs font-semibold">
-                      Student Joined
-                    </span>
+                  <div className="flex justify-between gap-3 md:gap-4">
+                    <CircularProgress score={90} label="Writing" color="#FFB800" />
+                    <CircularProgress score={80} label="Speaking" color="#FF5B5B" />
+                    <CircularProgress score={75} label="Listening" color="#8A70D6" />
+                    <CircularProgress score={85} label="Reading" color="#2ACCC8" />
                   </div>
                 </div>
-                <div className="max-w-[180px] text-muted-foreground text-[10px] leading-relaxed hidden md:block opacity-80">
-                  The world's most effective preparation platform. Guaranteed high
-                  scores via former examiner feedback.
+
+                {/* Student Joined Card */}
+                <div className="bg-white/60 backdrop-blur-xl border border-white/40 p-4 md:p-5 rounded-2xl shadow-xl">
+                  <div className="flex items-center gap-3">
+                    <div className="flex -space-x-3">
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary border-2 border-white overflow-hidden shadow-sm">
+                        <img
+                          src="https://i.pravatar.cc/100?u=1"
+                          className="w-full h-full object-cover"
+                          alt="User"
+                        />
+                      </div>
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-purple-400 border-2 border-white overflow-hidden shadow-sm">
+                        <img
+                          src="https://i.pravatar.cc/100?u=2"
+                          className="w-full h-full object-cover"
+                          alt="User"
+                        />
+                      </div>
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary border-2 border-white overflow-hidden shadow-sm">
+                        <img
+                          src="https://i.pravatar.cc/100?u=3"
+                          className="w-full h-full object-cover"
+                          alt="User"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-2xl md:text-3xl font-bold text-primary leading-none">
+                        300+
+                      </span>
+                      <span className="text-primary/70 text-xs font-semibold">
+                        Student Joined
+                      </span>
+                    </div>
+                  </div>
+                  <p className="mt-3 max-w-[220px] text-muted-foreground text-[11px] leading-relaxed hidden md:block">
+                    The world's most effective preparation platform. Guaranteed high
+                    scores via former examiner feedback.
+                  </p>
                 </div>
               </div>
 
