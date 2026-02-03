@@ -11,16 +11,16 @@ const CircularProgress = ({
   label: string;
 }) => {
   return <div className="flex flex-col items-center">
-      <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
+      <div className="relative w-9 h-9 md:w-11 md:h-11 flex items-center justify-center">
         <svg className="w-full h-full transform -rotate-90">
-          <circle cx="50%" cy="50%" r="42%" stroke="hsl(var(--muted))" strokeWidth="4" fill="transparent" className="opacity-20" />
-          <circle cx="50%" cy="50%" r="42%" stroke={color} strokeWidth="4" fill="transparent" strokeDasharray="100" strokeDashoffset={100 - score} strokeLinecap="round" />
+          <circle cx="50%" cy="50%" r="42%" stroke="hsl(var(--muted))" strokeWidth="3" fill="transparent" className="opacity-20" />
+          <circle cx="50%" cy="50%" r="42%" stroke={color} strokeWidth="3" fill="transparent" strokeDasharray="100" strokeDashoffset={100 - score} strokeLinecap="round" />
         </svg>
-        <span className="absolute text-sm md:text-base font-bold text-foreground">
+        <span className="absolute text-xs md:text-sm font-bold text-foreground">
           {score}
         </span>
       </div>
-      <span className="text-[10px] md:text-xs mt-1.5 text-muted-foreground font-medium">
+      <span className="text-[8px] md:text-[10px] mt-1 text-muted-foreground font-medium">
         {label}
       </span>
     </div>;
@@ -95,11 +95,11 @@ export const Hero = () => {
                 </div>
 
                 {/* Comunicative Skill Card */}
-                <div className="bg-white/80 backdrop-blur-xl border border-white/60 p-5 md:p-6 rounded-[2rem] shadow-2xl">
-                  <div className="text-primary font-semibold text-sm md:text-base mb-4">
+                <div className="bg-white/80 backdrop-blur-xl border border-white/60 p-3 md:p-4 rounded-2xl shadow-2xl">
+                  <div className="text-primary font-semibold text-xs md:text-sm mb-3">
                     Comunicative Skill
                   </div>
-                  <div className="flex justify-between gap-3 md:gap-4">
+                  <div className="flex justify-between gap-2 md:gap-3">
                     <CircularProgress score={90} label="Writing" color="#FFB800" />
                     <CircularProgress score={80} label="Speaking" color="#FF5B5B" />
                     <CircularProgress score={75} label="Listening" color="#8A70D6" />
