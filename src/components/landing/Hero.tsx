@@ -50,18 +50,6 @@ export const Hero = () => {
         </div>
 
         <MaxWidthWrapper className="relative z-10 h-full flex flex-col">
-          {/* Top Floating Elements */}
-          <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-            {/* Boost Your Brain Pill */}
-            <div className="absolute top-0 left-0 border border-white/40 bg-white/5 backdrop-blur-sm text-white px-6 py-2 rounded-full text-xs font-light tracking-wide hidden lg:block">
-              Boost Your Brain
-            </div>
-
-            {/* Boost Your Score Pill */}
-            <div className="absolute top-[40%] right-[-2%] border border-white/20 text-white/20 px-10 py-5 rounded-full text-sm tracking-widest hidden lg:block rotate-[-5deg]">
-              Boost Your Score
-            </div>
-          </div>
 
           {/* Main Content Area: Students and Floating Cards */}
           <div className="relative flex-grow flex items-end justify-center">
