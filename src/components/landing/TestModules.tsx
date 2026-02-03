@@ -23,34 +23,35 @@ const ModuleCard = ({
   return (
     <Card
       className={cn(
-        "h-[480px] md:h-[520px] flex flex-col group transition-colors duration-300 p-6",
+        "h-[550px] md:h-[600px] flex flex-col group transition-colors duration-300 p-8 rounded-[2rem] border-0",
         isDark
-          ? "bg-foreground/80 text-background border-muted-foreground/20"
-          : "bg-background text-foreground border-border"
+          ? "bg-foreground/90 text-background"
+          : "bg-background text-foreground"
       )}
     >
-      <div className="flex justify-between items-start mb-6">
-        <div className="flex items-center gap-2">
-          <span className={isDark ? "text-muted-foreground" : "text-muted-foreground"}>
+      <div className="flex justify-between items-start mb-4">
+        <div className="flex items-center gap-3">
+          <span className={isDark ? "text-background/70" : "text-foreground/70"}>
             {icon}
           </span>
-          <span className="font-medium text-lg">{title}</span>
+          <span className="font-semibold text-2xl">{title}</span>
         </div>
-        <span
-          className={cn(
-            "text-[10px] px-2 py-1 rounded uppercase font-bold tracking-wider",
-            isDark
-              ? "bg-secondary/20 text-secondary"
-              : "bg-primary/10 text-primary"
-          )}
-        >
-          AI Scoring
-        </span>
+        <div className="flex items-center gap-1.5">
+          <span
+            className={cn(
+              "text-xs font-medium",
+              isDark ? "text-primary" : "text-primary"
+            )}
+          >
+            AI Scoring
+          </span>
+          <span className="w-2 h-2 rounded-full bg-green-500"></span>
+        </div>
       </div>
 
-      <p className="text-xs text-muted-foreground mb-auto">{description}</p>
+      <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
 
-      <div className="relative h-40 w-full mt-4">{children}</div>
+      <div className="relative flex-1 w-full mt-6">{children}</div>
     </Card>
   );
 };
@@ -70,15 +71,17 @@ export const TestModules = () => {
           {/* Speaking */}
           <ModuleCard
             title="Speaking"
-            icon={<Mic />}
+            icon={<Mic className="w-6 h-6" />}
             theme="dark"
             description="Daily update essay with auto feedback scoring by AI"
           >
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-24 h-24 rounded-full border border-white/10 flex items-center justify-center relative">
-                <div className="absolute inset-0 border border-white/5 rounded-full scale-150"></div>
+              <div className="w-32 h-32 rounded-full border border-white/20 flex items-center justify-center relative">
+                <div className="absolute inset-0 border border-white/10 rounded-full scale-125"></div>
+                <div className="absolute inset-0 border border-white/10 rounded-full scale-150"></div>
+                <div className="absolute inset-0 border border-white/5 rounded-full scale-[1.75]"></div>
                 <div className="absolute inset-0 border border-white/5 rounded-full scale-[2]"></div>
-                <Mic className="w-8 h-8 text-background" />
+                <Mic className="w-10 h-10 text-background" />
               </div>
             </div>
           </ModuleCard>
@@ -86,18 +89,25 @@ export const TestModules = () => {
           {/* Writing */}
           <ModuleCard
             title="Writing"
-            icon={<PenTool />}
+            icon={<PenTool className="w-6 h-6" />}
             theme="light"
             description="Daily update essay with auto feedback scoring by AI"
           >
-            <div className="space-y-3 pt-4">
-              <div className="bg-primary text-primary-foreground p-3 rounded-lg text-xs flex justify-between shadow-lg transform -rotate-1">
-                <span>Task 1 Bar Chart</span>
-                <span className="opacity-70">30 min</span>
+            <div className="space-y-4 pt-4">
+              <div className="bg-primary text-primary-foreground p-4 rounded-xl text-sm flex justify-between items-center shadow-lg">
+                <div>
+                  <div className="font-medium">Task 1 Bar Chart</div>
+                  <div className="text-xs opacity-70 mt-1">30 minutes</div>
+                </div>
+                <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
               </div>
-              <div className="bg-foreground text-background p-3 rounded-lg text-xs flex justify-between shadow-lg transform rotate-2">
-                <span>Task 2 Essay</span>
-                <span className="opacity-70">40 min</span>
+              <div className="bg-foreground text-background p-4 rounded-xl text-sm shadow-lg">
+                <div className="font-medium">Task 2 Line Chart</div>
+                <div className="text-xs opacity-70 mt-1">40 minutes</div>
+              </div>
+              <div className="bg-foreground text-background p-4 rounded-xl text-sm shadow-lg">
+                <div className="font-medium">Task 2 Pie Chart</div>
+                <div className="text-xs opacity-70 mt-1">45 minutes</div>
               </div>
             </div>
           </ModuleCard>
@@ -105,36 +115,44 @@ export const TestModules = () => {
           {/* Reading */}
           <ModuleCard
             title="Reading"
-            icon={<BookOpen />}
+            icon={<BookOpen className="w-6 h-6" />}
             theme="dark"
-            description="Real exam questions updated daily"
+            description="Daily update essay with auto feedback scoring by AI"
           >
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-muted-foreground/20 rounded-tl-full"></div>
-            <div className="absolute bottom-4 right-4 text-right">
-              <div className="h-2 w-12 bg-muted-foreground/50 rounded mb-2 ml-auto"></div>
-              <div className="h-2 w-20 bg-muted-foreground/50 rounded mb-2 ml-auto"></div>
-              <div className="h-2 w-16 bg-muted-foreground/50 rounded ml-auto"></div>
+            <div className="absolute inset-0 overflow-hidden rounded-xl">
+              <div className="absolute inset-0 bg-foreground/50 p-4">
+                <div className="space-y-2 text-right text-xs text-muted-foreground">
+                  <p>dolor</p>
+                  <p>estie.</p>
+                  <p className="mt-4">s proin.</p>
+                  <p>dales duis</p>
+                  <p>ortor. Quis</p>
+                  <p>d montes</p>
+                  <p>ibus lacus.</p>
+                </div>
+              </div>
+              {/* Page curl effect */}
+              <div className="absolute bottom-0 right-0 w-24 h-24">
+                <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-tl from-background via-background to-transparent transform origin-bottom-right" 
+                     style={{ clipPath: 'polygon(100% 0, 100% 100%, 0 100%)' }}></div>
+              </div>
             </div>
           </ModuleCard>
 
           {/* Listening */}
           <ModuleCard
             title="Listening"
-            icon={<Headphones />}
+            icon={<Headphones className="w-6 h-6" />}
             theme="light"
-            description="Immersive audio tests with accents"
+            description="Daily update essay with auto feedback scoring by AI"
           >
-            <div className="flex items-end justify-center gap-1 h-full pb-6">
-              {[4, 8, 5, 10, 6, 9, 3].map((h, i) => (
-                <div
-                  key={i}
-                  className="w-2 bg-foreground rounded-full animate-pulse"
-                  style={{
-                    height: `${h * 10}%`,
-                    animationDelay: `${i * 0.1}s`,
-                  }}
-                ></div>
-              ))}
+            <div className="flex flex-col items-center justify-center h-full gap-6">
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-20 bg-foreground rounded-full"></div>
+                <div className="w-4 h-28 bg-foreground rounded-full"></div>
+                <div className="w-4 h-16 bg-foreground/60 rounded-full"></div>
+              </div>
+              <div className="w-32 h-2 bg-primary rounded-full"></div>
             </div>
           </ModuleCard>
         </div>
