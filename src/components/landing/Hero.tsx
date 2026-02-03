@@ -78,9 +78,9 @@ export const Hero = () => {
                 <img alt="Woman Student" className="w-full object-contain translate-y-2" src="/lovable-uploads/f49bb1e9-4b64-48d2-8502-8e36e213280c.png" />
               </div>
               
-              {/* Second Woman Student Image */}
-              <div className="relative z-10 w-[48%] md:w-[40%]">
-                <img alt="Woman Student" className="w-full object-contain translate-y-2" src="/lovable-uploads/1cee19a7-787c-4de2-ad72-bd6673766444.png" />
+              {/* Man Student Image */}
+              <div className="relative z-30 w-[48%] md:w-[40%] -ml-10 md:-ml-16">
+                <img alt="Man Student" className="w-full object-contain translate-y-2" src="/lovable-uploads/89b1756f-102f-4315-90b1-b0fe41148367.png" />
               </div>
 
               {/* Left Side Container: Learn Practies + Skills Card + Student Joined */}
