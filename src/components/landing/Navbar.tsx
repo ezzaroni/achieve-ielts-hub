@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { MaxWidthWrapper } from "@/components/layout/MaxWidthWrapper";
 import { cn } from "@/lib/utils";
+import { Instagram, Linkedin } from "lucide-react";
 import logoAchieved from "@/assets/logo-achieved.png";
 
 export const Navbar = () => {
@@ -19,10 +20,10 @@ export const Navbar = () => {
     name: "Our Test",
     href: "#test-modules"
   }, {
-    name: "Our Blog",
+    name: "Vocabulary Tutor",
     href: "#"
   }, {
-    name: "Contact us",
+    name: "Pricing",
     href: "#"
   }];
   return <nav className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6", isScrolled ? "bg-background/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent")}>
@@ -43,13 +44,24 @@ export const Navbar = () => {
             </a>)}
         </div>
 
-        {/* Right Icon */}
-        <div className="flex items-center">
-          <button className={cn("p-2 rounded-xl border transition-all", isScrolled ? "border-border text-foreground" : "border-white/20 text-white bg-white/10 backdrop-blur-sm")}>
-            <div className="w-6 h-6 border-2 border-current rounded-lg flex items-center justify-center">
-              <div className="w-2 h-2 bg-current rounded-full" />
-            </div>
-          </button>
+        {/* Social Icons */}
+        <div className="flex items-center gap-2">
+          <a 
+            href="https://instagram.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={cn("p-2 rounded-xl border transition-all hover:scale-105", isScrolled ? "border-border text-foreground hover:bg-muted" : "border-white/20 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20")}
+          >
+            <Instagram className="w-5 h-5" />
+          </a>
+          <a 
+            href="https://linkedin.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={cn("p-2 rounded-xl border transition-all hover:scale-105", isScrolled ? "border-border text-foreground hover:bg-muted" : "border-white/20 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20")}
+          >
+            <Linkedin className="w-5 h-5" />
+          </a>
         </div>
       </MaxWidthWrapper>
     </nav>;
