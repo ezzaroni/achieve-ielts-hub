@@ -4,7 +4,7 @@ import videoClassroom from "@/assets/video-classroom.png";
 
 export const VideoSection = () => {
   return (
-    <section className="relative" style={{ backgroundColor: '#1B1B1B' }}>
+    <section className="relative bg-muted">
       {/* Full Width Video Container */}
       <div className="relative w-full">
         {/* Video Image */}
