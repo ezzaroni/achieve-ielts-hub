@@ -33,7 +33,7 @@ const CurvedArrow = () => <svg width="60" height="40" viewBox="0 0 60 40" fill="
   </svg>;
 export const Hero = () => {
   return <>
-      <section className="relative w-full h-screen pt-32 pb-0 overflow-hidden" style={{
+      <section className="relative w-full min-h-screen pt-32 pb-0 overflow-hidden" style={{
       background: "linear-gradient(to bottom, hsl(200 69% 41%) 0%, hsl(var(--background)) 100%)"
     }}>
         {/* Background Gradient Overlay */}
