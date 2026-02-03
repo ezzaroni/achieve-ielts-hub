@@ -41,17 +41,10 @@ export const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-background" />
         </div>
 
-        {/* Background Big Text "achieved" - Split color and joined */}
+        {/* Background Big Text "achieved" */}
         <div className="absolute inset-0 z-0 flex items-center justify-center select-none pointer-events-none transform -translate-y-[8vw]">
-          <h1 className="text-[22vw] leading-none font-display font-bold tracking-tighter whitespace-nowrap flex items-center">
-            <span className="text-white">achie</span>
-            <span className="text-primary relative">
-              ved
-              {/* 'test' Badge */}
-              <div className="absolute top-[2vw] -right-[2vw] bg-secondary text-primary text-[2vw] font-bold px-3 py-0.5 rounded-xl shadow-xl transform rotate-6 border-2 border-white/20">
-                test
-              </div>
-            </span>
+          <h1 className="text-[22vw] leading-none font-display font-bold tracking-tighter whitespace-nowrap">
+            <span className="text-white">achieved</span>
           </h1>
         </div>
 
